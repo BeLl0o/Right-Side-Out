@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+        content="Right-Side-Out: Learning Zero-Shot Sim-to-Real Garment Reversal">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Right-Side-Out: Learning Zero-Shot Sim-to-Real Garment Reversal</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/ucla.jpg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -41,79 +41,55 @@
   <script src="./static/js/index.js"></script>
 </head>
 <body>
-
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Right-Side-Out: Learning Zero-Shot Sim-to-Real Garment Reversal</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://changyu.io/">Chang Yu</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://bell0o.github.io/">Siyu Ma</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://dwxrycb123.github.io/">Wenxin Du</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://www.math.ucla.edu/~zeshunzong/">Zeshun Zong</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="https://hanxue.me/">Han Xue</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              <a href="https://wendichen.me/">Wendi Chen</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://yangzzzy.github.io/">Yin Yang</a><sup>4</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://www.mvig.org/">Cewu Lu</a><sup>3</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=rEEc1X4AAAAJ">Xuchen Han</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=seHlDJ4AAAAJ&hl=en">Joseph Masterjohn</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://www.tri.global/about-us/dr-alejandro-castro">Alejandro Castro</a><sup>2</sup>
+            </span>
+            <span class="author-block">
+              <a href="https://www.math.ucla.edu/~cffjiang/">Chenfanfu Jiang</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>*</sup>Equal Contribution,</span>
+            <span class="author-block"><sup>1</sup>University of California, Los Angeles,</span>
+            <span class="author-block"><sup>2</sup>Toyota Research Institute</span>
+            <span class="author-block"><sup>3</sup>Shanghai Jiao Tong University</span>
+            <span class="author-block"><sup>4</sup>University of Utah</span>
           </div>
 
           <div class="column has-text-centered">
@@ -157,15 +133,6 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
             </div>
 
           </div>
@@ -190,7 +157,6 @@
     </div>
   </div>
 </section>
-
 
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -446,7 +412,7 @@
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
+  title     = {Right-Side-Out: Learning Zero-Shot Sim-to-Real Garment Reversal},
   journal   = {ICCV},
   year      = {2021},
 }</code></pre>

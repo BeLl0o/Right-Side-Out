@@ -157,65 +157,6 @@
     </div>
   </div>
 </section>
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -227,33 +168,86 @@
             We present the first method capable of photorealistically reconstructing a non-rigidly
             deforming scene using photos/videos captured casually from mobile phones.
           </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
+          
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
+    <section class="section authors-section" id="authors">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Authors</h2>
+
+    <div class="authors-grid">
+      <a class="author-card" href="https://changyu.io/">
+        <img class="author-photo" src="./static/images/authors/yc.jpg" alt="Chang Yu">
+        <div class="author-name">Chang Yu<sup>1*</sup></div>
+      </a>
+
+      <a class="author-card" href="https://bell0o.github.io/">
+        <img class="author-photo" src="./static/images/authors/msy.jpg" alt="Siyu Ma">
+        <div class="author-name">Siyu Ma<sup>1*</sup></div>
+      </a>
+
+      <a class="author-card" href="https://dwxrycb123.github.io/">
+        <img class="author-photo" src="./static/images/authors/dwx.jpg" alt="Wenxin Du">
+        <div class="author-name">Wenxin Du<sup>1</sup></div>
+      </a>
+
+      <a class="author-card" href="https://www.math.ucla.edu/~zeshunzong/">
+        <img class="author-photo" src="./static/images/authors/zzs.jpg" alt="Zeshun Zong">
+        <div class="author-name">Zeshun Zong<sup>1</sup></div>
+      </a>
+
+      <a class="author-card" href="https://hanxue.me/">
+        <img class="author-photo" src="./static/images/authors/xh.jpg" alt="Han Xue">
+        <div class="author-name">Han Xue<sup>3</sup></div>
+      </a>
+
+      <a class="author-card" href="https://wendichen.me/">
+        <img class="author-photo" src="./static/images/authors/cwd.jpg" alt="Wendi Chen">
+        <div class="author-name">Wendi Chen<sup>3</sup></div>
+      </a>
+
+      <a class="author-card" href="https://yangzzzy.github.io/">
+        <img class="author-photo" src="./static/images/authors/yy.jpg" alt="Yin Yang">
+        <div class="author-name">Yin Yang<sup>4</sup></div>
+      </a>
+
+      <a class="author-card" href="https://www.mvig.org/">
+        <img class="author-photo" src="./static/images/authors/lcw.jpg" alt="Cewu Lu">
+        <div class="author-name">Cewu Lu<sup>3</sup></div>
+      </a>
+
+      <a class="author-card" href="https://scholar.google.com/citations?user=rEEc1X4AAAAJ">
+        <img class="author-photo" src="./static/images/authors/hxc.jpg" alt="Xuchen Han">
+        <div class="author-name">Xuchen Han<sup>2</sup></div>
+      </a>
+
+      <a class="author-card" href="https://scholar.google.com/citations?user=seHlDJ4AAAAJ&hl=en">
+        <img class="author-photo" src="./static/images/authors/joe.jpeg" alt="Joseph Masterjohn">
+        <div class="author-name">Joseph Masterjohn<sup>2</sup></div>
+      </a>
+
+      <a class="author-card" href="https://www.tri.global/about-us/dr-alejandro-castro">
+        <img class="author-photo" src="./static/images/authors/Alejandro.png" alt="Alejandro Castro">
+        <div class="author-name">Alejandro Castro<sup>2</sup></div>
+      </a>
+
+      <a class="author-card" href="https://www.math.ucla.edu/~cffjiang/">
+        <img class="author-photo" src="./static/images/authors/jcff.jpg" alt="Chenfanfu Jiang">
+        <div class="author-name">Chenfanfu Jiang<sup>1</sup></div>
+      </a>
+    </div>
+
+    <div class="has-text-centered authors-affil-note">
+      <span><sup>*</sup>Equal Contribution</span> ·
+      <span><sup>1</sup>Univeristy of California, Los Angeles</span> ·
+      <span><sup>2</sup>Toyota Research Institute</span> ·
+      <span><sup>3</sup>Shanghaijiaotong Univeristy</span> ·
+      <span><sup>4</sup>University of Utah</span>
+    </div>
+  </div>
+</section>
 
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
